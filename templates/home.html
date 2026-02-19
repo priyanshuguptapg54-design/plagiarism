@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Finder App</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Cambria, serif;
+            background: linear-gradient(135deg, #eef2ff, #f8fbff);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #2c3e50;
+            margin-top: 40px;
+            letter-spacing: 1px;
+        }
+
+        form {
+            background: #ffffff;
+            width: 60%;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        label {
+            font-size: 24px;
+            color: #34495e;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #d0d7ff;
+            background: #f9faff;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            margin-top: 25px;
+            background: #6c7cff;
+            color: white;
+            border: none;
+            padding: 14px 35px;
+            font-size: 22px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: #4f5be0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(79, 91, 224, 0.3);
+        }
+
+        h2 {
+            font-size: 32px;
+            color: #1b5e20;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Plagiarism Finder App</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <label>Select First File</label>
+        <br>
+        <input type="file" name="f1" required>
+        <br><br>
+
+        <label>Select Second File</label>
+        <br>
+        <input type="file" name="f2" required>
+        <br><br>
+
+        <input type="submit" value="Check Plagiarism">
+
+    </form>
+
+    <h2>{{ msg }}</h2>
+
+</body>
+</html>
